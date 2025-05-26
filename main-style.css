@@ -1,0 +1,79 @@
+body
+{
+	display: block;
+	background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHNkZm5qbmYzOHp6MmUxeTNueTkxZ2R6bWY5NzhtbG4xM2pta2R5cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2LxosfDt7NIbu/giphy.gif");
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-color: rgb(36, 36, 36);
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	margin: 0;
+}
+
+.header
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 5.7rem;
+	background-color: rgb(0, 0, 0);
+}
+
+.btnCon
+{
+	display: inline-flex;
+	position: fixed;
+	top: 5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0);
+	width: 50%;
+	height: auto;
+	gap: 5rem;
+	align-items: center;
+	justify-content: center;
+}
+
+.btnCon button
+{
+	display: inline-block;
+	width: 9rem;
+	height: 4rem;
+	background-color: rgb(83, 243, 235);
+	border: none;
+	border-radius: 1rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+	font-size: 1.2em;
+	cursor: pointer;
+	/* offset-x offset-y blur-radius spread-radius color */
+	box-shadow: 0rem 0rem 1rem 0.3rem rgb(23, 153, 212);
+	transition: 0.17s;
+}
+
+.btnCon button:hover
+{
+	background-color: rgb(61, 180, 174);
+}
+
+.btnCon button:active
+{
+	background-color: rgb(73, 216, 149);
+}
+
+.header img
+{
+	display: inline-block;
+	position: relative;
+	top: 0.3rem;
+	left: 0.5rem;
+	width: 5rem;
+	height: auto;
+	border: none;
+	border-radius: 1rem;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TTK | WaveSurfer Audio Player</title>
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+    }
+
+    #waveform {
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .controls {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    button {
+      background: #6a1b9a;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #8e24aa;
+    }
+
+    input[type="range"] {
+      width: 150px;
+      cursor: pointer;
+    }
+
+    label {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎵 Marwan Pablo | Racore</h1>
+  <div id="waveform"></div>
+  <div class="controls">
+    <button id="playBtn">▶️ Play</button>
+    <label for="volume">🔊 Volume</label>
+    <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+  </div>
+
+  <img src="racore.jpg" alt="racoreImg" class="racoreImg">
+
+  <!-- WaveSurfer.js CDN -->
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+  <script>
+    const wavesurfer = WaveSurfer.create({
+      container: '#waveform',
+      waveColor: 'violet',
+      progressColor: 'purple',
+      height: 100,
+      barWidth: 3,
+      responsive: true
+    });
+
+    // Load your audio file
+    wavesurfer.load('racore.mp3');
+
+    // Play/Pause button
+    const playBtn = document.getElementById('playBtn');
+    playBtn.addEventListener('click', () => {
+      wavesurfer.playPause();
+    });
+
+    wavesurfer.on('play', () => {
+      playBtn.textContent = '⏸️ Pause';
+    });
+
+    wavesurfer.on('pause', () => {
+      playBtn.textContent = '▶️ Play';
+    });
+
+    // Volume control
+    const volumeSlider = document.getElementById('volume');
+    volumeSlider.addEventListener('input', () => {
+      wavesurfer.setVolume(parseFloat(volumeSlider.value));
+    });
+
+    // Set initial volume
+    wavesurfer.setVolume(1);
+  </script>
+
+</body>
+</html>

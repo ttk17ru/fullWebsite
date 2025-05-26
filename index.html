@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TTK MAIN</title>
+	<link rel="shortcut icon" href="dang3.png" type="image/png">
+	<link rel="stylesheet" href="main-style.css">
+	<link rel="stylesheet" href="respo.css">
+</head>
+<body>
+	<!-- The header -->
+	<div class="header">
+		<img src="dang3.png" alt="icona">
+		<div class="btnCon">
+			<button id="racoreBtn" class="racoreBtn">Racore</button>
+			<button id="MarwanBtn" class="MarwanBtn">Marwan Pablo</button>
+			<button id="playBtn" class="playBtn">Play</button>
+		</div>
+	</div>
+	<script>
+		const racoreBtn =  document.getElementById("racoreBtn");
+		const MarwanBtn =  document.getElementById("MarwanBtn");
+		const playBtn =  document.getElementById("playBtn");
+
+		racoreBtn.onclick = function() { window.location = "/racore.html" }
+		MarwanBtn.onclick = function() { window.location = "/marwanPablo.html" }
+		playBtn.onclick = function() { window.location = "/play.html" }
+	</script>
+</body>
+</html>
