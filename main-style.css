@@ -37,6 +37,15 @@ body
 	justify-content: center;
 }
 
+.Ht
+{
+	display: inline-flex;
+	position: fixed;
+	bottom: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 .btnCon button
 {
 	display: inline-block;
